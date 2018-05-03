@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<script>
+function f(){
+     var x= document.getElementById('age').value;
+     console.log(x);
+     if(x >= 18 )
+     {
+     return true;
+     }
+     else
+     {
+     alert("Age should be 18 or greater");
+     return false;
+     }
+     }
+function allLetter(inputtxt)
+      { 
+      var letters = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(letters))
+      {
+      return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+      return false;
+      }
+      }
+function ValidateEmail(inputText)
+      {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(inputText.value.match(mailformat))
+      {
+      document.validate.text2.focus();
+      return true;
+      }
+      else
+      {
+      alert("You have entered an invalid email address!");
+      document.validate.text2.focus();
+      return false;
+      }
+      }
+</script>
+
+<body onload="document.validate.text1.focus(); document.validate.text2.focus()">
+
+<div style="background-color:lightblue">
+
+<p align="center" style="font-size:30px">
+<I><b>XENA EVENTS</b></I>
+<center><img src="XENA.png" height="10%" width="10%"></center><br>
+</p>
+<p align="center">Feb 28th,2017</p> 
+
+<form name="validate" onsubmit="return f()">
+                
+               Name <input id="name" type="text" name='text1' placeholder="Your name" size="25" required/><br>
+               
+               Email <input id="email" type="email" name='text2' placeholder="Your email_id" size="25" required/><br>
+             
+              Age <input id="age" type="number" placeholder="Your age"  size="3" /><br>
+        
+              City <input id="city1" type="text" placeholder="if your city not in dropdown enter here" size="25" />  
+     
+  <select>
+  <option value="1">Chennai</option>
+  <option value="2">Mumbai</option>
+  <option value="3">Dehli</option>
+  <option value="4">Kolkata</option>
+  </select><br>
+          
+<input type="submit" onclick="allLetter(document.validate.text1); ValidateEmail(document.validate.text2)" value="Register!">
+</div>
+</form>
+</div>
+</body>
+</html>

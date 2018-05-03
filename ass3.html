@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<div id="container">
+    <header></header>
+    <main>
+        <section class="half">
+        <p align="center" style="font-size:70px"><i><font color="white">
+		Awesome online videos</font></i>
+	<a href="https://www.google.co.in/search?q=awesome+online+videos+logo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjW7L6z5__ZAhUMO48KHQUDBJUQ_AUICigB&biw=1536&bih=710#imgrc=oRZo_vlv_5XOEM:"></p>
+    <p>
+    <center>
+	<img align="center" src="http://helpfulsoftwaretools.com/wp-content/uploads/2018/02/bigstock-Video-Online-2597450-e1429748978678.jpg" alt="logo" width=20% height=30% >
+	</a>
+    </center>
+	</p>
+	</section>
+        <section class="half">
+<center>
+<p>
+	<video id="myVideo" width=40% height=30%>
+  	<source src="mov_bbb.mp4" type="video/mp4">
+ 	<source src="mov_bbb.ogg" type="video/ogg">
+	<a href="https://www.bigbuckbunny.org/"></a>
+	</video>   
+</p>
+	<button onclick="playVid()" type="button">Play Video</button>
+	<button onclick="pauseVid()" type="button">Pause Video</button> 
+<script>
+	var x = document.getElementById("myVideo"); 
+	function playVid() { 
+    	x.play(); 
+	} 
+	function pauseVid() { 
+    	x.pause(); 
+	} 
+</script>
+</center>
+</section>
+</main>
+</div>
+<style>
+{
+    margin: 0; padding: 0;
+}
+html, body, #container {
+    height: 100%;
+}
+header {
+    height: 50px;
+    background: white;
+}
+main {
+    height: calc(100% - 70px);
+    background: white;
+}
+.half {
+    height: 50%;
+}
+.half:first-child {
+    background: green;
+}
+.half:last-child {
+    background: grey;
+}</style>
+
+</body> 
+</html>
